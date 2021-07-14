@@ -1,0 +1,232 @@
+:root{
+    --VeryDarkGrayishBlue: hsl(217, 19%, 35%);
+    --DesaturatedDarkBlue: hsl(214, 17%, 51%);
+    --GrayishBlue: hsl(212, 23%, 69%);
+    --LightGrayishBlue: hsl(210, 46%, 95%);
+}
+/* - Font size: 13px */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Manrope', sans-serif;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(180deg, #fff, var(--LightGrayishBlue));
+}
+.card{
+    width: 85%;
+    margin: 70px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 3px 5px 10px var(--GrayishBlue);
+    background-color: #fff;
+}
+
+
+.card .banner-pic{
+    width: 100%;
+    object-fit: cover;
+}
+
+.txt-area{
+    width: 100%;
+    margin-top: 10px;
+    padding: 30px 30px 18px 30px;
+    box-sizing: border-box;
+}
+
+.txt-area h1{
+    font-size: 17px;
+    color: var(--VeryDarkGrayishBlue);
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    line-height: 25px;
+}
+
+.txt-area p{
+    font-size: 13px;
+    color: var(--GrayishBlue);
+    font-weight: 400;
+    letter-spacing: .5px;
+    margin-top: 15px;
+}
+
+.writer{
+    width: 100%;
+    display: flex;
+    padding-top: 30px;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.writer .writer-pic{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.writer-introduce{
+    padding-left: 10%;
+}
+
+.writer-introduce .name{
+    font-size: 13px;
+    color: var(--VeryDarkGrayishBlue);
+}
+
+.writer-introduce .date{
+    font-size: 13px;
+    font-weight: 300;
+    color: var(--GrayishBlue);
+    word-spacing: .5px;
+    margin-top: 2px;
+    
+}
+
+.icon-share{
+    width: 30px;
+    height: 30px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: var(--LightGrayishBlue);
+    position: absolute;
+    right: 0;
+    
+}
+
+.icon-share img{
+    position: absolute;
+    left: 7.5px;
+    top: 8px;
+}
+
+.social-media{
+    padding: 0 30px 8px 30px;
+    position: absolute;
+    bottom: 0;
+    height: 70px;
+    width: 100%;
+    background-color: var(--VeryDarkGrayishBlue);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    
+}
+
+.social-media p{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-weight: 200;
+    color: var(--GrayishBlue);
+}
+
+.social-media .icon-share{
+    right: 30px;
+    bottom: 25px;
+    background-color: var(--DesaturatedDarkBlue);
+}
+
+.social-media-icon{
+    padding-left: 20px;
+}
+
+.hidden{
+    display: none;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    width: 100%; 
+    bottom: 0; 
+    position: fixed;
+    background-color: white;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+
+@media only screen and (min-width: 769px) {
+    .container{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+    }
+
+    .card{
+        display: flex;
+        max-width: 750px;
+        min-height: 290px;
+        overflow: unset;
+    }
+
+    .pic-area{
+        width: 78%;
+        min-height: 290px;
+        border-radius: 15px 0 0 15px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .banner-pic{
+        height: 100%;
+        transform: scale(1.1);
+        padding-left: 14px;
+        padding-top: 10px;
+    }
+
+    .txt-area{
+        padding: 20px 35px;
+    }
+    
+    .txt-area p{
+        height: 72px;
+    }
+    .writer{
+        padding-top: 23px;
+    }
+    .writer p{
+        height: 18px;
+    }
+
+    .social-media{
+        width: 250px;
+        height: 50px;
+        padding: 0 30px;
+        border-radius: 15px;
+        position: absolute;
+        right: -56px;
+        bottom: 93px;
+    }
+    .social-media::after {
+        content: "";
+        border-color: var(--VeryDarkGrayishBlue) transparent transparent transparent;
+        border-style: solid solid solid solid;
+        border-width: 20px;
+        position: absolute;
+        left: 125px;
+        bottom: -29px;
+    }
+
+    .social-media .icon-share{
+        right: 90px;
+        bottom: -55px;
+        background-color: var(--DesaturatedDarkBlue);
+    }    
+
+    .attribution { 
+    position: fixed;
+    }
+}
+
